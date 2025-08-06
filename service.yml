@@ -1,0 +1,13 @@
+kind: service
+apiVersion: v1
+metadata:
+  name: notes-service
+  namespace: notes
+spec:
+  selector:
+    app: notes
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+  type: ClusterIP

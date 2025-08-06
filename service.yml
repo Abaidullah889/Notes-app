@@ -1,11 +1,11 @@
-kind: service
-apiVersion: v1
+kind: Service
+apiVersion: v1       
 metadata:
   name: notes-service
-  namespace: notes
+  namespace: notes   
 spec:
   selector:
-    app: notes
+    app: notes       
   ports:
     - protocol: TCP
       port: 8000

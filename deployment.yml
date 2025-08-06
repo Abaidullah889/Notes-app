@@ -1,5 +1,5 @@
-apiVersion: apps/v1
 kind: Deployment
+apiVersion: apps/v1
 metadata:
   name: notes
   labels:
@@ -7,7 +7,7 @@ metadata:
   namespace: notes
 spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       app: notes
   template:
@@ -15,8 +15,8 @@ spec:
       labels:
         app: notes
     spec:
-      containers: 
+      containers:
       - name: notes
-        image: abaidullah889/notes
+        image: abaidullah889/notes-app
         ports:
-          containerPort: 8000
+          - containerPort: 8000 
